@@ -1,4 +1,4 @@
-import React, { useState, useContext} from "react";
+import React, { useContext} from "react";
 import { formatPrice } from "../utils/StringUtils";
 import { Link } from "react-router-dom";
 import {appContent} from "../content/ProductState";
@@ -17,7 +17,7 @@ export default function Card({articleId,
     const addCart = () => {
       const arr = state.filter((item) => item.articleId === articleId);
 
-      if (arr.length == 0) {
+      if (arr.length === 0) {
         setState ((state) => {
           return [
             ...state, 

@@ -9,7 +9,6 @@ export default function Product() {
   const getProductList  = async() => {
     const data = await ProductAPI.getProductList();
     setSearchList([...data.data.product]);
-    setSourceList([...data.data.product]);
     getProductStore([...data.data.product]);
     setLoading(true);
   };
@@ -17,8 +16,6 @@ export default function Product() {
   const [searchList, setSearchList] = useState([]);
 
   const [search, setSearch] = useState("");
-
-  const [sourceList, setSourceList] = useState([]);
   
   const [loading, setLoading] = useState(false);
 

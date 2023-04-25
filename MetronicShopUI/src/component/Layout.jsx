@@ -8,7 +8,8 @@ export default function Layout () {
 
     const navigat = useNavigate();
     const user = JSON.parse(sessionStorage.getItem("nickname"));
-        useEffect( () => {
+    
+    useEffect( () => {
         user ?  navigat('/product') : navigat('/login') ;
     },[]);    
 
